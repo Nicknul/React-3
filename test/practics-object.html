@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="practics.module.js"></script>
+    <script>
+      const root = document.querySelector('#root');
+      // console.log(root);
+
+      const elementData = {
+        id: 'login',
+        tag: 'div',
+        textNode: ['input', 'submit'],
+        root: {
+          width: '30vw',
+          height: '50vh',
+          backgroundColor: '#333',
+          padding: '10px',
+        },
+        input: { width: '80%', height: '24px', backgroundColor: '#D9D9D9' },
+        submit: { width: '80%', height: '24px', backgroundColor: '#9AFF92' },
+      };
+
+      root.appendChild(elementMaker(elementData.tag, elementData.root));
+      root.children[0].id = elementData.id;
+
+      const login = document.querySelector('#login');
+
+      const input = elementMaker(elementData.tag, elementData.input, elementData.textNode[0]);
+      const submit = elementMaker(elementData.tag, elementData.submit, elementData.textNode[1]);
+      login.appendChild(input);
+      login.appendChild(submit);
+    </script>
+  </body>
+</html>

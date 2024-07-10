@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practics</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="practics.module.js"></script>
+    <script>
+      window.document.body.style.margin = 0;
+      window.document.body.style.padding = 0;
+
+      const root = document.querySelector('#root');
+      // root style
+      root.style.width = '300px';
+      root.style.height = '500px';
+      root.style.backgroundColor = '#666666';
+
+      const inputStyle = {
+        width: '200px',
+        height: '50px',
+        backgroundColor: '#d9d9d9',
+      };
+
+      const buttonStyle = {
+        width: '100px',
+        height: '50px',
+        backgroundColor: '#9aff92',
+      };
+
+      const input = elementMaker('div', inputStyle, 'input');
+      const button = elementMaker('div', buttonStyle, 'button');
+
+      root.appendChild(input);
+      root.appendChild(button);
+      console.log(input);
+
+      // element created
+      // const container = document.createElement('div');
+      // const input = document.createElement('div');
+      // const button = document.createElement('div');
+      // container.appendChild(input);
+      // container.appendChild(button);
+      // root.appendChild(container);
+
+      // container.style.height = '400px';
+
+      // input.style.width = '200px';
+      // input.style.height = '50px';
+      // input.style.backgroundColor = '#d9d9d9';
+
+      // button.style.width = '100px';
+      // button.style.height = '50px';
+      // button.style.backgroundColor = '#9aff92';
+    </script>
+  </body>
+</html>
